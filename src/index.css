@@ -1,6 +1,21 @@
+        /*home-page*/
+/*header*/
 @import url(./styles/home-page/header/header.css);
 @import url(./styles/home-page/header/header__logo.css);
 @import url(./styles/home-page/header/header__profile-btn.css);
+/*title*/
+@import url(./styles/home-page/title/title.css);
+@import url(./styles/home-page/title/title__new-site.css);
+@import url(./styles/home-page/title/title__phrase.css);
+/*card*/
+@import url(./styles/home-page/card/card.css);
+@import url(./styles/home-page/card/card__img-container.css);
+@import url(./styles/home-page/card/card__title.css);
+@import url(./styles/home-page/card/card__description.css);
+@import url(./styles/home-page/card/card__btn.css);
+@import url(./styles/home-page/card/card__container.css);
+
+
 
 body {
   margin: 0;
