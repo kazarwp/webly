@@ -1,0 +1,13 @@
+.menu-popup {
+  max-width: 260px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-left: 155px;
+  opacity: 0;
+  animation: ani 0.5s forwards;
+}
+
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
