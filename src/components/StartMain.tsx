@@ -5,10 +5,10 @@ export const MainContent = () => {
     <main>
       <h1>Ваш идеальный сайт всего в пару кликов.</h1>
       <p>Конструируйте, вдохновляйтесь, реализуйте с WEBLY!</p>
-      <ul>
-        <li><a href="#">Документация</a></li>
-        <li><a href="#">Создать сайт</a></li>
-      </ul>
+      <div className="actions">
+        <a href="#" className="documentation-link">Документация</a>
+        <a href="#" className="create-site-button">Создать сайт</a>
+      </div>
     </main>
   );
 };
