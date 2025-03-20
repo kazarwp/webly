@@ -1,0 +1,14 @@
+.header__profile-btn {
+  margin: 0 30px 0 0;
+  border: none;
+  background-color: black;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.header__profile-btn:hover {
+  opacity: 50%;
+}

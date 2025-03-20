@@ -1,0 +1,8 @@
+.card__img-container {
+  width: 350px;
+  height: 250px;
+  background-color: rgba(243, 243, 243, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

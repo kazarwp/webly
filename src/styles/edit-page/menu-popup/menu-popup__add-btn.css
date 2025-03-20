@@ -1,0 +1,8 @@
+.menu-popup__add-btn {
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 12px;
+}

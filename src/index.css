@@ -1,10 +1,47 @@
+        /*home-page*/
+/*header*/
+@import url(./styles/home-page/header/header.css);
+@import url(./styles/home-page/header/header__logo.css);
+@import url(./styles/home-page/header/header__profile-btn.css);
+/*title*/
+@import url(./styles/home-page/title/title.css);
+@import url(./styles/home-page/title/title__new-site.css);
+@import url(./styles/home-page/title/title__phrase.css);
+/*card*/
+@import url(./styles/home-page/card/card.css);
+@import url(./styles/home-page/card/card__img-container.css);
+@import url(./styles/home-page/card/card__title.css);
+@import url(./styles/home-page/card/card__description.css);
+@import url(./styles/home-page/card/card__btn.css);
+@import url(./styles/home-page/card/card__container.css);
+        /*edit-page*/
+/*edit-menu*/
+@import url(./styles/edit-page/edit-menu/edit-menu__list.css);
+@import url(./styles/edit-page/edit-menu/edit-menu__element.css);
+/*menu-popup*/
+@import url(./styles/edit-page/menu-popup/menu-popup.css);
+@import url(./styles/edit-page/menu-popup/menu-popup__title.css);
+@import url(./styles/edit-page/menu-popup/menu-popup__input.css);
+@import url(./styles/edit-page/menu-popup/menu-popup__inputs-container.css);
+@import url(./styles/edit-page/menu-popup/menu-popup__btn-container.css);
+@import url(./styles/edit-page/menu-popup/menu-popup__add-btn.css);
+@import url(./styles/edit-page/menu-popup/menu-popup__ready-btn.css);
+        /*start-page*/
+@import url(./styles/start-page/start.css);
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
+  width: 100%;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  font-style: italic;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(0, 0, 0, 0.87);
   background-color: #ffffff;
 
   font-synthesis: none;
