@@ -1,13 +1,11 @@
-import '../styles/start-page/start.css';
-
 export const MainContent = () => {
   return (
-    <main>
-      <h1>Ваш идеальный сайт всего в пару кликов.</h1>
-      <p>Конструируйте, вдохновляйтесь, реализуйте с WEBLY!</p>
-      <div className="actions">
-        <a href="#" className="documentation-link">Документация</a>
-        <a href="#" className="create-site-button">Создать сайт</a>
+    <main className="start__main">
+      <h1 className = "start__h1">Ваш идеальный сайт всего в пару кликов.</h1>
+      <p className = "start__p">Конструируйте, вдохновляйтесь, реализуйте с WEBLY!</p>
+      <div className="start__actions">
+        <a href="#" className="start__documentation-link">Документация</a>
+        <a href="#" className="start__create-site-button">Создать сайт</a>
       </div>
     </main>
   );

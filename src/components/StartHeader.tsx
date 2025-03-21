@@ -1,13 +1,12 @@
-import '../styles/start-page/start.css';
 import headerLogo from "../assets/card-img.svg";
 
 export const StartHeader = () => {
   return (
-    <header>
-      <div className="header-buttons">
-      <img src={headerLogo} alt="Webly Logo" style={{ height: '50px' }} /> {/* Логотип */}
-        <button className="login-button">Войти</button>
-        <button className="register-button">Регистрация</button>
+    <header className = "header-start">
+      <div className="start__header-buttons">
+      <img className="start__header__logo" src={headerLogo} alt="Лого" />
+        <button className="start__login-button">Войти</button>
+        <button className="start__register-button">Регистрация</button>
       </div>
     </header>
   );
