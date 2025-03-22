@@ -26,6 +26,13 @@
 @import url(./styles/edit-page/menu-popup/menu-popup__btn-container.css);
 @import url(./styles/edit-page/menu-popup/menu-popup__add-btn.css);
 @import url(./styles/edit-page/menu-popup/menu-popup__ready-btn.css);
+@import url(./styles/edit-page/menu-popup/menu-popup__case.css);
+
+      /*element*/
+/*header-element*/
+@import url(./styles/elements/header-element/header-element.css);
+@import url(./styles/elements/header-element/header-element__img.css);
+@import url(./styles/elements/header-element/header-element__title.css);
 
 body {
   margin: 0;

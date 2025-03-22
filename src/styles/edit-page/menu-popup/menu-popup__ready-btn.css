@@ -3,4 +3,10 @@
   border: none;
   padding: 5px 20px 5px;
   border-radius: 50px;
+  cursor: pointer;
+  opacity: 100%;
+}
+
+.menu-popup__ready-btn:hover {
+  opacity: 80%;
 }

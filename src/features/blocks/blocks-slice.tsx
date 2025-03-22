@@ -1,9 +1,19 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { IHeaderInput } from "../../utils/interface";
 
-const initialState = []
+const initialState = {
+  elements: [],
+};
 
 export const blocksSlice = createSlice({
-  name: "@@blocks",
+  name: "@blocks",
   initialState,
-  reducers: {}
-})
+  reducers: {
+    createHeader: (state, action: PayloadAction<IHeaderInput>) => {
+      state.elements.push(action.payload);
+    },
+  },
+});
+
+export const { createHeader } = blocksSlice.actions;
+export const blocksReducer = blocksSlice.reducer;

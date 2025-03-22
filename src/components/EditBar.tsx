@@ -7,7 +7,7 @@ export const EditBar = ({ handleOpenPopup }: IEditBar) => {
     <nav className="edit-menu">
       <ul className="edit-menu__list">
         <li className="edit-menu__element" onClick={() => handleOpenPopup()}>
-          Меню
+          Шапка
         </li>
         <li className="edit-menu__element">Обложка</li>
         <li className="edit-menu__element">Заголовок</li>

@@ -7,7 +7,7 @@ export const App = () => {
       <Header />
       <HomePageText />
     </>
-  )
+  );
 };
 
 export default App;
