@@ -10,3 +10,4 @@ export const MainContent = () => {
     </main>
   );
 };
+
