@@ -1,12 +1,23 @@
-interface IEditBar {
-  handleOpenPopup: () => void;
-}
+import { memo } from "react";
+import { useAppDispatch, useAppSelector } from "../utils/reduxHooks";
+import { IPopupSettings } from "../utils/interface";
+import { handleHeaderPopup } from "../features/settings/settings-slice";
 
-export const EditBar = ({ handleOpenPopup }: IEditBar) => {
+export const EditBar = memo(() => {
+  const dispatch = useAppDispatch();
+  const settingsPopup: IPopupSettings = useAppSelector(
+    (state) => state.settings
+  );
+
+  const handeleHeaderPopup = () => {
+    const headerPopup: boolean = settingsPopup.headerPopup;
+    dispatch(handleHeaderPopup(!headerPopup));
+  };
+
   return (
     <nav className="edit-menu">
       <ul className="edit-menu__list">
-        <li className="edit-menu__element" onClick={() => handleOpenPopup()}>
+        <li className="edit-menu__element" onClick={() => handeleHeaderPopup()}>
           Шапка
         </li>
         <li className="edit-menu__element">Обложка</li>
@@ -18,4 +29,4 @@ export const EditBar = ({ handleOpenPopup }: IEditBar) => {
       </ul>
     </nav>
   );
-};
+});

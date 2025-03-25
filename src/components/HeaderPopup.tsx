@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { useAppDispatch } from "../utils/reduxHooks";
+import { useAppDispatch, useAppSelector } from "../utils/reduxHooks";
 import { createHeader } from "../features/blocks/blocks-slice";
 
 import { IHeaderInput } from "../utils/interface";
 
-interface IMenuPopup {
-  isOpen: boolean;
-}
+// interface IMenuPopup {
+//   isOpen: boolean;
+// }
 
-export const HeaderPopup: React.FC<IMenuPopup> = ({ isOpen }) => {
-
-  const dispatch = useAppDispatch()
+export const HeaderPopup: React.FC = () => {
+  const dispatch = useAppDispatch();
+  const isOpen: boolean = useAppSelector(state => state.settings.headerPopup)
 
   const [headerInput, setHeaderInput] = useState<IHeaderInput>({
     type: "header",
@@ -19,7 +19,8 @@ export const HeaderPopup: React.FC<IMenuPopup> = ({ isOpen }) => {
     color: "",
     opacity: false,
   });
-
+  const [disableSubmit, setDisableSubmit] = useState(false);
+  
   const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     const { name, value } = event.target;
@@ -27,14 +28,15 @@ export const HeaderPopup: React.FC<IMenuPopup> = ({ isOpen }) => {
       return {
         ...prevState,
         [name]: value,
-        opacity: true
+        opacity: true,
       };
     });
   };
 
   const addHeaderComponent = () => {
-    dispatch(createHeader(headerInput))
-  }
+    dispatch(createHeader(headerInput));
+    setDisableSubmit(true);
+  };
 
   if (!isOpen) {
     return null;
@@ -72,7 +74,12 @@ export const HeaderPopup: React.FC<IMenuPopup> = ({ isOpen }) => {
         </div>
       </div>
       <div className="menu-popup__btn-container">
-        <button type="submit" onClick={() => addHeaderComponent()} className="menu-popup__ready-btn">
+        <button
+          type="submit"
+          onClick={() => addHeaderComponent()}
+          className="menu-popup__ready-btn"
+          disabled={disableSubmit}
+        >
           Готово ✔
         </button>
       </div>

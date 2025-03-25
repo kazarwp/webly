@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { blocksReducer } from "./features/blocks/blocks-slice";
+import { settingsReducer } from "./features/settings/settings-slice";
 
 export const store = configureStore({
   reducer: {
-    blocks: blocksReducer
+    blocks: blocksReducer,
+    settings: settingsReducer
   },
   devTools: true,
 })

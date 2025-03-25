@@ -1,26 +1,23 @@
-import { useState } from "react";
-import { useAppSelector } from "../utils/reduxHooks";
+import { useCallback, useState } from "react";
 
 import { Header } from "../components/Header";
 import { EditBar } from "../components/EditBar";
 import { HeaderPopup } from "../components/HeaderPopup";
-import { HeaderElement } from "../UI/HeaderElement";
+import { EditField } from "../components/EditField";
 
 export const EditPage = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const headerProps = useAppSelector((state) => state.blocks.elements[0]);
-  
+  // const [isOpen, setIsOpen] = useState(false);
 
-  const handleOpenPopup = () => {
-    setIsOpen(!isOpen);
-  };
+  // const handleOpenPopup = (() => {
+  //   setIsOpen(!isOpen);
+  // });
 
   return (
     <>
       <Header />
-      <EditBar handleOpenPopup={handleOpenPopup} />
-      <HeaderPopup isOpen={isOpen} />
-      {headerProps !== undefined && <HeaderElement />}
+      <EditBar />
+      <HeaderPopup />
+      <EditField />
     </>
   );
 };
