@@ -10,6 +10,7 @@ import { HomePage }   from "./pages/HomePage.tsx";
 import { EditPage } from "./pages/EditPage.tsx";
 import { StartPage }  from "./pages/StartPage.tsx";
 import { ProfilePage }  from "./pages/ProfilePage.tsx";
+import { LoginPage }  from "./pages/LoginPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -20,6 +21,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/edit" element={<EditPage />} />
           <Route path="/start" element={<StartPage />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </BrowserRouter>
     </Provider>

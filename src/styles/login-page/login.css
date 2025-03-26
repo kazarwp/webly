@@ -1,0 +1,61 @@
+/* Устанавливаем фон */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("https://images.unsplash.com/photo-1727708578194-2d44f3c600f1?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==") no-repeat center center/cover;
+  }
+  
+  /* Основной блок авторизации */
+  .login-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+  }
+  
+  /* Заголовок */
+  h2 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* Поля ввода */
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Кнопка входа */
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Ссылка на регистрацию */
+  .register-link {
+    margin-top: 10px;
+    color: #bbb;
+    font-size: 14px;
+  }
+  
+  .register-link a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
