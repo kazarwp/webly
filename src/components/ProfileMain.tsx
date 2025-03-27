@@ -7,7 +7,7 @@ export const ProfileMain = () => {
       <img src={logoImage} alt="Логотип" className="logo" />
       
       {/* Заголовки */}
-      <h2 className="profile-title">Профиль</h2>
+      <p className="page-section-title">Профиль</p>
       <p className="profile-username">@Имяпользователя</p>
       <p className="page-section-title">Ваша страница</p>
 

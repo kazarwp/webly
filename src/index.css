@@ -30,6 +30,8 @@
 @import url(./styles/start-page/start.css);
         /*profile-page*/
 @import url(./styles/profile-page/profile-img/profile.css);
+        /*login-page*/
+@import url(./styles/login-page/login.css);
 
 body {
   margin: 0;
