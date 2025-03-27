@@ -3,7 +3,7 @@ import logo from "../assets/header_logo.svg";
 export const RegMain = () => {
     return (
         <div className="login-container">
-            <div className="login-box">
+            <div className="reg-box">
                 <img src={logo} alt="Webly Logo" className="logo" />
                 <h2 className="login-h2">Создайте учетную запись</h2>
                 <input type="text" placeholder="Имя" className="input-field" />
