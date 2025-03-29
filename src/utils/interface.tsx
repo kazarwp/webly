@@ -20,3 +20,5 @@ export interface IPopupSettings {
   buttonPopup: boolean,
   footerPopup: boolean,
 }
+
+export type BlockElements = IHeaderInput | ICoverInput

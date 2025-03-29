@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAppSelector } from "../utils/reduxHooks";
 import { useAppDispatch } from "../utils/reduxHooks";
-import { createCover } from "../features/blocks/blocks-slice";
+import { createElement } from "../features/blocks/blocks-slice";
 import { ICoverInput } from "../utils/interface";
 
 export const CoverPopup = () => {
@@ -26,7 +26,7 @@ export const CoverPopup = () => {
   };
 
   const handlerSubmitCover = () => {
-    dispatch(createCover(inputCoverPopup))
+    dispatch(createElement(inputCoverPopup))
   }
 
   if (!isOpen) {

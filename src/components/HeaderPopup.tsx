@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "../utils/reduxHooks";
-import { createHeader } from "../features/blocks/blocks-slice";
+import { createElement } from "../features/blocks/blocks-slice";
 
 import { IHeaderInput } from "../utils/interface";
 
@@ -29,7 +29,7 @@ export const HeaderPopup: React.FC = () => {
   };
 
   const addHeaderComponent = () => {
-    dispatch(createHeader(headerInput));
+    dispatch(createElement(headerInput));
     setDisableSubmit(true);
   };
 
