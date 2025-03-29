@@ -4,10 +4,6 @@ import { createHeader } from "../features/blocks/blocks-slice";
 
 import { IHeaderInput } from "../utils/interface";
 
-// interface IMenuPopup {
-//   isOpen: boolean;
-// }
-
 export const HeaderPopup: React.FC = () => {
   const dispatch = useAppDispatch();
   const isOpen: boolean = useAppSelector(state => state.settings.headerPopup)
@@ -17,7 +13,6 @@ export const HeaderPopup: React.FC = () => {
     name: "",
     src: "",
     color: "",
-    opacity: false,
   });
   const [disableSubmit, setDisableSubmit] = useState(false);
   

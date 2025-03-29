@@ -3,7 +3,12 @@ export interface IHeaderInput {
   name: string;
   src: string;
   color: string;
-  opacity: boolean;
+}
+
+export interface ICoverInput {
+  type: string,
+  height: string,
+  src: string
 }
 
 export interface IPopupSettings {

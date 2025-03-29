@@ -9,17 +9,21 @@ const initialState: IPopupSettings = {
   imgPopup: false,
   buttonPopup: false,
   footerPopup: false,
-}
+};
 
 export const settingsSlice = createSlice({
   name: "@settings",
   initialState,
   reducers: {
-     handleHeaderPopup: (state, action: PayloadAction<boolean>) => {
-      state.headerPopup = action.payload
-     }
-  }
-})
+    openPopup: (state, action: PayloadAction<string>) => {
+      const property = action.payload;
+      if (property in state) {
+        state[property as keyof typeof state] =
+          !state[property as keyof typeof state];
+      }
+    },
+  },
+});
 
-export const { handleHeaderPopup } = settingsSlice.actions;
+export const { openPopup } = settingsSlice.actions;
 export const settingsReducer = settingsSlice.reducer;
