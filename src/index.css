@@ -29,7 +29,7 @@
         /*start-page*/
 @import url(./styles/start-page/start.css);
         /*profile-page*/
-@import url(./styles/profile-page/profile-img/profile.css);
+@import url(./styles/profile-page/profile.css);
         /*login-page*/
 @import url(./styles/login-page/login.css);
         /*reg-page*/

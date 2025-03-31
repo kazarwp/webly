@@ -11,7 +11,7 @@ export const RegMain = () => {
                 <input type="password" placeholder="Пароль" className="input-field" />
                 <button className="login-button">Создать</button>
                 <p className="register-link">
-                Уже есть аккаунт? <a href="/register">Войти тут</a>
+                Уже есть аккаунт? <a href="/login">Войти тут</a>
                 </p>
             </div>
         </div>

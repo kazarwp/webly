@@ -10,7 +10,7 @@ export const LoginMain = () => {
                 <input type="password" placeholder="Пароль" className="input-field" />
                 <button className="login-button">Войти</button>
                 <p className="register-link">
-                Нет аккаунта? <a href="/register">Зарегистрироваться тут</a>
+                Нет аккаунта? <a href="/reg">Зарегистрироваться тут</a>
                 </p>
             </div>
         </div>
