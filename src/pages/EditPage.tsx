@@ -7,7 +7,6 @@ import { EditField } from "../components/EditField";
 import { CoverPopup } from "../components/CoverPopup";
 
 export const EditPage = () => {
-
   return (
     <>
       <Header />

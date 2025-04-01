@@ -29,7 +29,7 @@ export const CoverPopup = () => {
 
   const handlerSubmitCover = () => {
     dispatch(createElement(inputCoverPopup));
-    setDisableSubmit(true)
+    setDisableSubmit(true);
   };
 
   if (!isOpen) {
