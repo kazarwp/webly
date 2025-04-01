@@ -7,7 +7,8 @@ export interface IHeaderInput {
 
 export interface ICoverInput {
   type: string,
-  height: string,
+  width: number | string | undefined,
+  height: number | string | undefined,
   src: string
 }
 

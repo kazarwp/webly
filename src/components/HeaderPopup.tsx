@@ -6,7 +6,7 @@ import { IHeaderInput } from "../utils/interface";
 
 export const HeaderPopup: React.FC = () => {
   const dispatch = useAppDispatch();
-  const isOpen: boolean = useAppSelector(state => state.settings.headerPopup)
+  const isOpen: boolean = useAppSelector((state) => state.settings.headerPopup);
 
   const [headerInput, setHeaderInput] = useState<IHeaderInput>({
     type: "header",
@@ -14,8 +14,9 @@ export const HeaderPopup: React.FC = () => {
     src: "",
     color: "",
   });
-  const [disableSubmit, setDisableSubmit] = useState(false);
   
+  const [disableSubmit, setDisableSubmit] = useState(false);
+
   const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     const { name, value } = event.target;

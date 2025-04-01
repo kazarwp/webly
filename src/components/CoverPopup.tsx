@@ -5,14 +5,16 @@ import { createElement } from "../features/blocks/blocks-slice";
 import { ICoverInput } from "../utils/interface";
 
 export const CoverPopup = () => {
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
+  const isOpen = useAppSelector((state) => state.settings.coverPopup);
+
   const [inputCoverPopup, setInputCoverPopup] = useState<ICoverInput>({
     type: "cover",
+    width: "",
     height: "",
     src: "",
   });
-
-  const isOpen = useAppSelector((state) => state.settings.coverPopup)
+  const [disableSubmit, setDisableSubmit] = useState(false);
 
   const handlerInputsPopup = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
@@ -26,8 +28,9 @@ export const CoverPopup = () => {
   };
 
   const handlerSubmitCover = () => {
-    dispatch(createElement(inputCoverPopup))
-  }
+    dispatch(createElement(inputCoverPopup));
+    setDisableSubmit(true)
+  };
 
   if (!isOpen) {
     return null;
@@ -38,6 +41,14 @@ export const CoverPopup = () => {
       <h2 className="menu-popup__title">Заполните поля шапки</h2>
       <div className="menu-popup__inputs-container">
         <div className="menu-popup__case">
+          <input
+            name="width"
+            value={inputCoverPopup.width}
+            type="text"
+            className="menu-popup__input"
+            placeholder="Ширина обложки"
+            onChange={handlerInputsPopup}
+          />
           <input
             name="height"
             value={inputCoverPopup.height}
@@ -57,7 +68,12 @@ export const CoverPopup = () => {
         </div>
       </div>
       <div className="menu-popup__btn-container">
-        <button type="submit" className="menu-popup__ready-btn" onClick={() => handlerSubmitCover()}>
+        <button
+          type="submit"
+          className="menu-popup__ready-btn"
+          onClick={() => handlerSubmitCover()}
+          disabled={disableSubmit}
+        >
           Готово ✔
         </button>
       </div>
