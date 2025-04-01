@@ -1,10 +1,10 @@
 import headerLogo from "../assets/header_logo.svg";
 
-export const Header = () => {
+export const ProfileHeader = () => {
   return (
     <div className="header">
       <img className="header__logo" src={headerLogo} alt="Лого" />
-      <button className="header__profile-btn">Профиль</button>
+      <button className="header__profile-btn">Выйти</button>
     </div>
   );
 };

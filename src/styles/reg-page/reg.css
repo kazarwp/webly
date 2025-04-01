@@ -1,0 +1,8 @@
+.reg-box {
+    background: rgba(33, 33, 33, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 500px;
+    box-sizing: border-box;
+}
