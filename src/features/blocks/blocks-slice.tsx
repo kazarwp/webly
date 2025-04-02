@@ -3,6 +3,7 @@ import {
   IHeaderInput,
   BlockElements,
   ICoverInput,
+  ITitleInput,
 } from "../../utils/interface";
 import { RootState } from "../../store";
 
@@ -28,8 +29,13 @@ export const headerSelect = (state: RootState): IHeaderInput | undefined =>
   state.blocks.elements.find(
     (element): element is IHeaderInput => element.type === "header"
   );
-  
+
 export const coverSelect = (state: RootState): ICoverInput | undefined =>
   state.blocks.elements.find(
     (element): element is ICoverInput => element.type === "cover"
+  );
+
+export const titleSelect = (state: RootState): ITitleInput | undefined =>
+  state.blocks.elements.find(
+    (element): element is ITitleInput => element.type === "title"
   );

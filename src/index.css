@@ -36,6 +36,8 @@
 /*cover-element*/
 @import url(./styles/elements/cover-element/cover.css);
 @import url(./styles/elements/cover-element/cover__img.css);
+/*title-element*/
+@import url(./styles/elements/title-element/title__text.css);
 
 /*start-page*/
 @import url(./styles/start-page/start.css);
