@@ -8,7 +8,7 @@ export const CoverElement = () => {
   if (!coverElement) return null
 
   const { width, height, src } = coverElement
-
+  
   return (
     <div className="cover">
       <img src={src} alt="обложка" className="cover__img" style={{width: `${width}px`, height: `${height}px`}} />

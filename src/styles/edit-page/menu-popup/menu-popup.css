@@ -2,18 +2,23 @@
   max-width: 260px;
   border: 1px solid black;
   border-radius: 10px;
-  margin-left: 155px;
+  margin-left: 325px;
   opacity: 0;
   animation: ani 0.5s forwards;
 }
 
 .menu-popup_cover {
-  margin-left: 325px;
+  margin-left: 485px;
 }
 
 .menu-popup_title {
-  margin-left: 490px;
+  margin-left: 655px;
 }
+
+.menu-popup_text {
+  margin-left: 820px;
+}
+
 
 @keyframes ani {
   0% {opacity: 0;}

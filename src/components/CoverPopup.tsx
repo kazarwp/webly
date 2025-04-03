@@ -7,7 +7,7 @@ import { ICoverInput } from "../utils/interface";
 export const CoverPopup = () => {
   const dispatch = useAppDispatch();
   const isOpen = useAppSelector((state) => state.settings.coverPopup);
-
+  
   const [inputCoverPopup, setInputCoverPopup] = useState<ICoverInput>({
     type: "cover",
     width: "",

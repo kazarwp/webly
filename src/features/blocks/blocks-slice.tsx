@@ -4,6 +4,7 @@ import {
   BlockElements,
   ICoverInput,
   ITitleInput,
+  ITextInput,
 } from "../../utils/interface";
 import { RootState } from "../../store";
 
@@ -38,4 +39,9 @@ export const coverSelect = (state: RootState): ICoverInput | undefined =>
 export const titleSelect = (state: RootState): ITitleInput | undefined =>
   state.blocks.elements.find(
     (element): element is ITitleInput => element.type === "title"
+  );
+
+export const contentSelect = (state: RootState): ITextInput[] | undefined =>
+  state.blocks.elements.filter(
+    (element): element is ITextInput => element.type === "text"
   );

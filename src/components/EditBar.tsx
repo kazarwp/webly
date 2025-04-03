@@ -16,6 +16,10 @@ export const EditBar = memo(() => {
   const handlerTitlePopup = () => {
     dispatch(openPopup("titlePopup"))
   }
+
+  const handlerTextPopup = () => {
+    dispatch(openPopup("textPopup"))
+  }
  
   return (
     <nav className="edit-menu">
@@ -25,8 +29,7 @@ export const EditBar = memo(() => {
         </li>
         <li className="edit-menu__element" onClick={() => handlerCoverPopup()}>Обложка</li>
         <li className="edit-menu__element" onClick={() => handlerTitlePopup()}>Заголовок</li>
-        <li className="edit-menu__element">Текст</li>
-        <li className="edit-menu__element">Изображение</li>
+        <li className="edit-menu__element" onClick={() => handlerTextPopup()}>Контент</li>
         <li className="edit-menu__element">Подвал</li>
       </ul>
     </nav>

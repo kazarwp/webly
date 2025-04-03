@@ -16,6 +16,15 @@ export interface ITitleInput {
   type: string,
   titleText: string,
 }
+
+export interface ITextInput {
+  type: string,
+  text: string,
+  size: number,
+  weight: number,
+  src: string,
+  height: number,
+}
 export interface IPopupSettings {
   headerPopup: boolean,
   coverPopup: boolean,
@@ -26,4 +35,4 @@ export interface IPopupSettings {
   footerPopup: boolean,
 }
 
-export type BlockElements = IHeaderInput | ICoverInput | ITitleInput
+export type BlockElements = IHeaderInput | ICoverInput | ITitleInput | ITextInput
