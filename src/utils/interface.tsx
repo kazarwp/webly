@@ -43,4 +43,15 @@ export interface IPopupSettings {
   footerPopup: boolean,
 }
 
+export interface IRegistration {
+  name: string,
+  email: string,
+  password: string,
+}
+
+export interface ILogin {
+  email: string,
+  password: string,
+}
+
 export type BlockElements = IHeaderInput | ICoverInput | ITitleInput | ITextInput | IFooterInput
