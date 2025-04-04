@@ -5,6 +5,7 @@ import {
   ICoverInput,
   ITitleInput,
   ITextInput,
+  IFooterInput,
 } from "../../utils/interface";
 import { RootState } from "../../store";
 
@@ -44,4 +45,9 @@ export const titleSelect = (state: RootState): ITitleInput | undefined =>
 export const contentSelect = (state: RootState): ITextInput[] | undefined =>
   state.blocks.elements.filter(
     (element): element is ITextInput => element.type === "text"
+  );
+
+export const footerSelect = (state: RootState): IFooterInput | undefined =>
+  state.blocks.elements.find(
+    (element): element is IFooterInput => element.type === "footer"
   );

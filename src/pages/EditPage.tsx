@@ -4,7 +4,8 @@ import { HeaderPopup } from "../components/HeaderPopup";
 import { EditField } from "../components/EditField";
 import { CoverPopup } from "../components/CoverPopup";
 import { TitlePopup } from "../components/TitlePopup";
-import { TextPopup } from "../components/ContentPopup";
+import { ContentPopup } from "../components/ContentPopup";
+import { FooterPopup } from "../components/FooterPopup";
 
 export const EditPage = () => {
   return (
@@ -14,7 +15,8 @@ export const EditPage = () => {
       <HeaderPopup />
       <CoverPopup />
       <TitlePopup />
-      <TextPopup />
+      <ContentPopup />
+      <FooterPopup />
       <EditField />
     </>
   );

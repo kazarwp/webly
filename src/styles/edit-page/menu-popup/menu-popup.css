@@ -19,6 +19,10 @@
   margin-left: 820px;
 }
 
+.menu-popup_footer {
+  margin-left: 995px;
+}
+
 
 @keyframes ani {
   0% {opacity: 0;}

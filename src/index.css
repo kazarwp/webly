@@ -1,4 +1,4 @@
-        /*home-page*/
+/*home-page*/
 /*header*/
 @import url(./styles/home-page/header/header.css);
 @import url(./styles/home-page/header/header__logo.css);
@@ -14,7 +14,7 @@
 @import url(./styles/home-page/card/card__description.css);
 @import url(./styles/home-page/card/card__btn.css);
 @import url(./styles/home-page/card/card__container.css);
-        /*edit-page*/
+/*edit-page*/
 /*edit-menu*/
 @import url(./styles/edit-page/edit-menu/edit-menu__list.css);
 @import url(./styles/edit-page/edit-menu/edit-menu__element.css);
@@ -28,7 +28,7 @@
 @import url(./styles/edit-page/menu-popup/menu-popup__ready-btn.css);
 @import url(./styles/edit-page/menu-popup/menu-popup__case.css);
 
-      /*element*/
+/*element*/
 /*header-element*/
 @import url(./styles/elements/header-element/header-element.css);
 @import url(./styles/elements/header-element/header-element__img.css);
@@ -41,6 +41,9 @@
 /*content-element*/
 @import url(./styles/elements/content/content.css);
 @import url(./styles/elements/content/content__container.css);
+/*footer-element*/
+@import url(./styles/elements/footer/footer.css);
+@import url(./styles/elements/footer/footer__icon.css);
 
 /*start-page*/
 @import url(./styles/start-page/start.css);
@@ -55,8 +58,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
-
 
 :root {
   width: 100%;

@@ -25,6 +25,14 @@ export interface ITextInput {
   src: string,
   height: number,
 }
+
+export interface IFooterInput {
+  type: string,
+  name: string,
+  year: string,
+  src: string,
+  color: string, 
+}
 export interface IPopupSettings {
   headerPopup: boolean,
   coverPopup: boolean,
@@ -35,4 +43,4 @@ export interface IPopupSettings {
   footerPopup: boolean,
 }
 
-export type BlockElements = IHeaderInput | ICoverInput | ITitleInput | ITextInput
+export type BlockElements = IHeaderInput | ICoverInput | ITitleInput | ITextInput | IFooterInput

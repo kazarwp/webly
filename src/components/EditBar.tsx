@@ -10,27 +10,39 @@ export const EditBar = memo(() => {
   };
 
   const handlerCoverPopup = () => {
-    dispatch(openPopup("coverPopup"))
-  }
+    dispatch(openPopup("coverPopup"));
+  };
 
   const handlerTitlePopup = () => {
-    dispatch(openPopup("titlePopup"))
-  }
+    dispatch(openPopup("titlePopup"));
+  };
 
   const handlerTextPopup = () => {
-    dispatch(openPopup("textPopup"))
-  }
- 
+    dispatch(openPopup("textPopup"));
+  };
+
+  const handlerFooterPopup = () => {
+    dispatch(openPopup("footerPopup"));
+  };
+
   return (
     <nav className="edit-menu">
       <ul className="edit-menu__list">
         <li className="edit-menu__element" onClick={() => handlerHeaderPopup()}>
           Шапка
         </li>
-        <li className="edit-menu__element" onClick={() => handlerCoverPopup()}>Обложка</li>
-        <li className="edit-menu__element" onClick={() => handlerTitlePopup()}>Заголовок</li>
-        <li className="edit-menu__element" onClick={() => handlerTextPopup()}>Контент</li>
-        <li className="edit-menu__element">Подвал</li>
+        <li className="edit-menu__element" onClick={() => handlerCoverPopup()}>
+          Обложка
+        </li>
+        <li className="edit-menu__element" onClick={() => handlerTitlePopup()}>
+          Заголовок
+        </li>
+        <li className="edit-menu__element" onClick={() => handlerTextPopup()}>
+          Контент
+        </li>
+        <li className="edit-menu__element" onClick={() => handlerFooterPopup()}>
+          Подвал
+        </li>
       </ul>
     </nav>
   );
