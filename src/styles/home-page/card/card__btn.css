@@ -16,3 +16,8 @@
 .card__btn:hover {
   opacity: 80%;
 }
+
+.card__btn_footer {
+  width: 179px;
+  margin-top: 25px;
+}

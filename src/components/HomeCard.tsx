@@ -1,3 +1,5 @@
+import { NavLink } from "react-router";
+
 import cardImg from "../assets/card-img.svg";
 
 export const HomeCard = () => {
@@ -9,7 +11,9 @@ export const HomeCard = () => {
       <div className="card__container">
         <p className="card__title">Пустая страница</p>
         <p className="card__description">Начать с чистого листа.</p>
-        <button className="card__btn">Выбрать дизайн</button>
+        <NavLink to="/edit">
+          <button className="card__btn">Выбрать дизайн</button>
+        </NavLink>
       </div>
     </div>
   );

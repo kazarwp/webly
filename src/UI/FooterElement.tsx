@@ -1,6 +1,7 @@
 import { useAppSelector } from "../utils/reduxHooks";
 
 import { footerSelect } from "../features/blocks/blocks-slice";
+import { NavLink } from "react-router";
 
 export const FooterElement = () => {
   const footerElement = useAppSelector(footerSelect);
@@ -10,12 +11,17 @@ export const FooterElement = () => {
   const { name, color, src, year } = footerElement;
 
   return (
-    <div className="footer" style={{ backgroundColor: color }}>
-      <div className="footer__icon">
-        <img src={src} alt="Логотип" className="header-element__img" />
-        <h1 className="header-element__title">{name}</h1>
+    <div className="footer__container">
+      <div className="footer" style={{ backgroundColor: color }}>
+        <div className="footer__icon">
+          <img src={src} alt="Логотип" className="header-element__img" />
+          <h1 className="header-element__title">{name}</h1>
+        </div>
+        <h1 className="header-element__title">{year}</h1>
       </div>
-      <h1 className="header-element__title">{year}</h1>
+      <NavLink to="/site">
+        <button className="card__btn card__btn_footer">Посмотерть сайт</button>
+      </NavLink>
     </div>
   );
 };

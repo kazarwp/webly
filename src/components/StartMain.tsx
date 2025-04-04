@@ -1,3 +1,5 @@
+import { NavLink } from "react-router";
+
 export const MainContent = () => {
   return (
     <main className="start__main">
@@ -5,7 +7,7 @@ export const MainContent = () => {
       <p className = "start__p">Конструируйте, вдохновляйтесь, реализуйте с WEBLY!</p>
       <div className="start__actions">
         <a href="#" className="start__documentation-link">Документация</a>
-        <a href="#" className="start__create-site-button">Создать сайт</a>
+        <NavLink to="/home" className="start__create-site-button">Создать сайт</NavLink>
       </div>
     </main>
   );

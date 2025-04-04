@@ -44,6 +44,7 @@
 /*footer-element*/
 @import url(./styles/elements/footer/footer.css);
 @import url(./styles/elements/footer/footer__icon.css);
+@import url(./styles/elements/footer/footer__container.css);
 
 /*start-page*/
 @import url(./styles/start-page/start.css);

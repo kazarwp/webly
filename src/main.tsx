@@ -12,18 +12,20 @@ import { StartPage }  from "./pages/StartPage.tsx";
 import { ProfilePage }  from "./pages/ProfilePage.tsx";
 import { LoginPage }  from "./pages/LoginPage.tsx";
 import { RegPage }  from "./pages/RegPage.tsx";
+import { EditField } from "./components/EditField.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/edit" element={<EditPage />} />
-          <Route path="/start" element={<StartPage />} />
+          <Route path="/" element={<StartPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/reg" element={<RegPage />} />
+          <Route path="/site" element={<EditField/>} />
         </Routes>
       </BrowserRouter>
     </Provider>
