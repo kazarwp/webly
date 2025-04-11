@@ -5,8 +5,11 @@ import { ILogin } from "../utils/interface";
 
 import logo from "../assets/header_logo.svg";
 import axios from "axios";
+import { useAppDispatch } from "../utils/reduxHooks";
+import { addUserInfo } from "../features/user/user-slice";
 
 export const LoginMain = () => {
+  const dispatch = useAppDispatch()
   const [accountLogin, setAccountLogin] = useState<ILogin>({
     email: "",
     password: "",
@@ -28,7 +31,7 @@ export const LoginMain = () => {
   const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await axios.post(
+      await axios.post(
         "https://weblybackend.onrender.com/api/auth/login",
         {
           email: accountLogin.email,
@@ -41,7 +44,7 @@ export const LoginMain = () => {
         }
       );
       navigate("/")
-      
+      dispatch(addUserInfo(accountLogin))
     } catch (error) {
       console.log(error);
     }
@@ -72,7 +75,7 @@ export const LoginMain = () => {
           Войти
         </button>
         <p className="register-link">
-          Нет аккаунта? <a href="/register">Зарегистрироваться тут</a>
+          Нет аккаунта? <a href="/reg">Зарегистрироваться тут</a>
         </p>
       </div>
     </div>

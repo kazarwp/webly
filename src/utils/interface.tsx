@@ -17,6 +17,13 @@ export interface ITitleInput {
   titleText: string,
 }
 
+export interface IUserInfo {
+  type: string,
+  email: string,
+  auth: boolean,
+  password: string,
+}
+
 export interface ITextInput {
   type: string,
   text: string,

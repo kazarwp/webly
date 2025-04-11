@@ -30,7 +30,7 @@ export const RegMain = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
+      await axios.post(
         "https://weblybackend.onrender.com/api/auth/register",
         {
           name: formData.name, // возможно, сервер ожидает 'username' вместо 'name'
@@ -82,7 +82,7 @@ export const RegMain = () => {
           Создать
         </button>
         <p className="register-link">
-          Уже есть аккаунт? <a href="/register">Войти тут</a>
+          Уже есть аккаунт? <a href="/login">Войти тут</a>
         </p>
       </div>
     </div>
