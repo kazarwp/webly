@@ -15,6 +15,11 @@ export const userSlice = createSlice({
   reducers: {
     addUserInfo: (_, action: PayloadAction<ILogin>) => {
       const {email, password} = action.payload
+
+      localStorage.setItem('email', email);
+      localStorage.setItem('password', password);
+      localStorage.setItem('auth', 'true');
+
       return {
         ...initialState,
         email,
@@ -23,6 +28,10 @@ export const userSlice = createSlice({
       }
     },
     clearUserInfo: () => {
+      localStorage.removeItem('email');
+      localStorage.removeItem('password');
+      localStorage.setItem('auth', 'false');
+
       return initialState
     }
   },
