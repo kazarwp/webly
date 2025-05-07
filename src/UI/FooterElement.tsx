@@ -1,12 +1,15 @@
 import { useAppSelector } from "../utils/reduxHooks";
 
-import { footerSelect } from "../features/blocks/blocks-slice";
+import { elementSelect } from "../features/blocks/blocks-slice";
 import { NavLink } from "react-router";
 import { useLocation } from "react-router-dom";
+import { IFooterInput } from "../utils/interface";
 
 export const FooterElement = () => {
   const location = useLocation();
-  const footerElement = useAppSelector(footerSelect);
+  const footerElement = useAppSelector((state) =>
+    elementSelect<IFooterInput>(state, "footer")
+  );
 
   if (!footerElement) return null;
 

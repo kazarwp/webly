@@ -1,9 +1,11 @@
-import { coverSelect } from "../features/blocks/blocks-slice"
+import { elementSelect } from "../features/blocks/blocks-slice"
+import { ICoverInput } from "../utils/interface"
 import { useAppSelector } from "../utils/reduxHooks"
 
 export const CoverElement = () => {
 
-  const coverElement = useAppSelector(coverSelect)
+  const coverElement = useAppSelector((state) =>
+      elementSelect<ICoverInput>(state, "cover"))
 
   if (!coverElement) return null
 

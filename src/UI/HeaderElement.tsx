@@ -1,8 +1,12 @@
-import { headerSelect } from "../features/blocks/blocks-slice";
 import { useAppSelector } from "../utils/reduxHooks";
 
+import { IHeaderInput } from "../utils/interface";
+import { elementSelect } from "../features/blocks/blocks-slice";
+
 export const HeaderElement = () => {
-  const headerElement = useAppSelector(headerSelect);
+  const headerElement = useAppSelector((state) =>
+    elementSelect<IHeaderInput>(state, "header")
+  );
 
   if (!headerElement) return null;
 
